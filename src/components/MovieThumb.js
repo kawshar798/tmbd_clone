@@ -1,10 +1,14 @@
 import React from 'react';
-
-const MovieThumb = () => {
+import {StyledMovieThumb} from "../components/styles/StyledMovieThumb";
+const MovieThumb = ({image,movieId,chlickable}) => {
     return (
-        <div>
-            Movie Thumb
-        </div>
+        <StyledMovieThumb>
+            {
+                chlickable?(
+                        <img  className="clickable" src={image} alt="moveithumb"/>
+                ):( <img   src={image} alt="moveithumb"/>)
+            }
+        </StyledMovieThumb>
     );
 };
 
